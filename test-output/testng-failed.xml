@@ -8,6 +8,7 @@
     <classes>
       <class name="testcases.CreateIncident">
         <methods>
+          <include name="tearDown"/>
           <include name="setUp"/>
           <include name="createIncident"/>
         </methods>

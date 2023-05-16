@@ -4,7 +4,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 import constants.FrameworkConstants;
 import enums.ConfigProperties;
@@ -20,7 +20,12 @@ public class Driver {
 		if(DriverManager.getDriver()==null)
 		{
 			System.setProperty("webdriver.chrome.driver", FrameworkConstants.getChromeDriverPath());
-			WebDriver driver= new ChromeDriver();
+			ChromeOptions options = new ChromeOptions();
+
+			options.addArguments("--remote-allow-origins=*");
+
+			WebDriver driver= new ChromeDriver(options);
+			
 			DriverManager.setDriver(driver);
 			
 			try {

@@ -21,7 +21,7 @@ public final class CreateIncident extends BaseTest {
 		new ServiceNow_LoginPage()
 			
 			.enterUserName("admin")
-			.enterPassword("!B5/kiWdpL9M")
+			.enterPassword("ll3DS=pp4B-P")
 			.clickLoginButton()
 			.enterSearchText_filterNavigator("Incidents")
 			.clickIncidentLink()
