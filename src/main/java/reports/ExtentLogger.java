@@ -2,7 +2,7 @@ package reports;
 
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
-import org.testng.internal.PropertyUtils;
+
 
 import com.aventstack.extentreports.MediaEntityBuilder;
 

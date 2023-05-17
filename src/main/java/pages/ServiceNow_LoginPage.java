@@ -17,7 +17,7 @@ public class ServiceNow_LoginPage extends BasePage{
 	
 	public ServiceNow_LoginPage enterUserName(String username)
 	{
-		switchToFrame("gsft_main");
+		//switchToFrame("gsft_main");
 		
 		sendKeys(By.xpath(userName), username, WaitStrategy.PRESENCE,"User name");
 		

@@ -2,32 +2,28 @@
 <testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="72605" started-at="2023-05-16T12:09:39Z" finished-at="2023-05-16T12:10:52Z">
+  <suite name="Suite" duration-ms="47049" started-at="2023-05-16T12:31:07Z" finished-at="2023-05-16T12:31:54Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="72605" started-at="2023-05-16T12:09:39Z" finished-at="2023-05-16T12:10:52Z">
+    <test name="Test" duration-ms="47049" started-at="2023-05-16T12:31:07Z" finished-at="2023-05-16T12:31:54Z">
       <class name="testcases.CreateIncident">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:testcases.CreateIncident@1e802ef9]" name="setUp" is-config="true" duration-ms="11453" started-at="2023-05-16T17:39:39Z" finished-at="2023-05-16T17:39:51Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:testcases.CreateIncident@1e802ef9]" name="setUp" is-config="true" duration-ms="10681" started-at="2023-05-16T18:01:07Z" finished-at="2023-05-16T18:01:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="FAIL" signature="createIncident()[pri:0, instance:testcases.CreateIncident@1e802ef9]" name="createIncident" duration-ms="60101" started-at="2023-05-16T17:39:51Z" finished-at="2023-05-16T17:40:51Z">
-          <exception class="org.openqa.selenium.NoSuchFrameException">
+        <test-method status="FAIL" signature="createIncident()[pri:0, instance:testcases.CreateIncident@1e802ef9]" name="createIncident" duration-ms="35164" started-at="2023-05-16T18:01:18Z" finished-at="2023-05-16T18:01:53Z">
+          <exception class="org.openqa.selenium.TimeoutException">
             <message>
-              <![CDATA[No frame element found by name or id gsft_main
-Build info: version: '4.1.2', revision: '9a5a329c5a'
-System info: host: 'DESKTOP-2PIKAKN', ip: '10.117.56.20', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_271'
-Driver info: driver.version: unknown]]>
+              <![CDATA[Expected condition failed: waiting for presence of element located by: By.xpath: //input[@id='filter'] (tried for 30 second(s) with 500 milliseconds interval)]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchFrameException: No frame element found by name or id gsft_main
-Build info: version: '4.1.2', revision: '9a5a329c5a'
-System info: host: 'DESKTOP-2PIKAKN', ip: '10.117.56.20', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_271'
-Driver info: driver.version: unknown
-	at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.frame(RemoteWebDriver.java:1045)
-	at pages.BasePage.switchToFrame(BasePage.java:67)
-	at pages.ServiceNow_LoginPage.enterUserName(ServiceNow_LoginPage.java:20)
-	at testcases.CreateIncident.createIncident(CreateIncident.java:23)
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //input[@id='filter'] (tried for 30 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:138)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at factories.ExplicitWaitFactory.performExplicitWait(ExplicitWaitFactory.java:25)
+	at pages.BasePage.sendKeys(BasePage.java:50)
+	at pages.ServiceNow_HomePage.enterSearchText_filterNavigator(ServiceNow_HomePage.java:20)
+	at testcases.CreateIncident.createIncident(CreateIncident.java:26)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -53,13 +49,41 @@ Driver info: driver.version: unknown
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//input[@id='filter']"}
+  (Session info: chrome=113.0.5672.93)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.1.2', revision: '9a5a329c5a'
+System info: host: 'DESKTOP-2PIKAKN', ip: '10.117.56.20', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_271'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [d93a39363a8ec92510e0573acdeef75a, findElement {using=xpath, value=//input[@id='filter']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 113.0.5672.93, chrome: {chromedriverVersion: 113.0.5672.63 (0e1a4471d5ae..., userDataDir: C:\Users\Windows\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:64678}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64678/devtoo..., se:cdpVersion: 113.0.5672.93, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: d93a39363a8ec92510e0573acdeef75a
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:558)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:382)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:374)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:174)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:171)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
+	... 29 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchFrameException -->
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createIncident -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:testcases.CreateIncident@1e802ef9]" name="tearDown" is-config="true" duration-ms="800" started-at="2023-05-16T17:40:51Z" finished-at="2023-05-16T17:40:52Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:testcases.CreateIncident@1e802ef9]" name="tearDown" is-config="true" duration-ms="829" started-at="2023-05-16T18:01:53Z" finished-at="2023-05-16T18:01:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
