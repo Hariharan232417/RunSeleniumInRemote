@@ -26,6 +26,8 @@ public class Driver {
 
 			WebDriver driver= new ChromeDriver(options);
 			
+			
+			
 			DriverManager.setDriver(driver);
 			
 			try {
