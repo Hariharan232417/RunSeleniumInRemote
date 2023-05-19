@@ -1,10 +1,13 @@
 package drivers;
 
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
 import constants.FrameworkConstants;
 import enums.ConfigProperties;
@@ -23,11 +26,20 @@ public class Driver {
 			ChromeOptions options = new ChromeOptions();
 
 			options.addArguments("--remote-allow-origins=*");
+			
+			DesiredCapabilities cap = new DesiredCapabilities();
+			cap.setBrowserName("chrome");
+			
+			
 
-			WebDriver driver= new ChromeDriver(options);
-			
-			
-			
+			RemoteWebDriver driver=null;
+			try {
+				driver = new RemoteWebDriver(new URL("http://7.6.6.5:4444"),cap);
+			} catch (MalformedURLException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+						
 			DriverManager.setDriver(driver);
 			
 			try {
