@@ -34,7 +34,7 @@ public class Driver {
 
 			RemoteWebDriver driver=null;
 			try {
-				driver = new RemoteWebDriver(new URL("http://7.6.6.5:4444"),cap);
+				driver = new RemoteWebDriver(new URL("http://13.233.254.139:4444"),cap);
 			} catch (MalformedURLException e1) {
 				// TODO Auto-generated catch block
 				e1.printStackTrace();
