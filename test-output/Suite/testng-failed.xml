@@ -6,13 +6,13 @@
   </listeners>
   <test name="Test(failed)">
     <classes>
-      <class name="testcases.CreateIncident">
+      <class name="testcases.CreateLead">
         <methods>
           <include name="tearDown"/>
           <include name="setUp"/>
-          <include name="createIncident"/>
+          <include name="createLead"/>
         </methods>
-      </class> <!-- testcases.CreateIncident -->
+      </class> <!-- testcases.CreateLead -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -6,7 +6,7 @@
 </listeners> 
   <test thread-count="5" name="Test">
     <classes>
-      <class name="testcases.CreateIncident"/>
+      <class name="testcases.CreateLead"/>
      
     </classes>
   </test> <!-- Test -->

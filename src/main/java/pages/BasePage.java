@@ -11,6 +11,8 @@ import reports.ExtentLogger;
 
 public class BasePage {
 	
+	public static String leadNumber = "";
+	
 	protected void click(By by,WaitStrategy waitStrategy,String elementName)
 	{
 		ExplicitWaitFactory.performExplicitWait(waitStrategy, by).click();
@@ -55,6 +57,21 @@ public class BasePage {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+	}
+	
+	
+	protected String getElementText(By by, WaitStrategy waitStrategy,String elementName)
+	{
+		String text = ExplicitWaitFactory.performExplicitWait(waitStrategy, by).getText();
+		
+		try {
+			ExtentLogger.pass(elementName +" is saved to a variable",true);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return text;
 	}
 	
 	protected String getPageTitle()
