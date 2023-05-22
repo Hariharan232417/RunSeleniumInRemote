@@ -19,7 +19,6 @@ public final class CreateIncident extends BaseTest {
 		
 		
 		new ServiceNow_LoginPage()
-			
 			.enterUserName("Demosalesmanager")
 			.enterPassword("crmsfa")
 			.clickLoginButton()
