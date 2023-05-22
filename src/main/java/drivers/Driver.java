@@ -27,6 +27,7 @@ public class Driver {
 			options.addArguments("--remote-allow-origins=*");
 			WebDriver driver= new ChromeDriver(options);
 			
+<<<<<<< HEAD
 //			DesiredCapabilities cap = new DesiredCapabilities();
 //			cap.setBrowserName("chrome");
 //			RemoteWebDriver driver=null;
@@ -37,6 +38,9 @@ public class Driver {
 //			// TODO Auto-generated catch block
 //		e1.printStackTrace();
 //			}
+=======
+			
+>>>>>>> 3d2ca47054a5bda8771026f1cf6bfe5823f78df7
 			
 			DriverManager.setDriver(driver);
 			
