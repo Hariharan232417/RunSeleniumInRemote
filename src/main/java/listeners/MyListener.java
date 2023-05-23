@@ -14,7 +14,7 @@ import reports.ExtentReport;
 public class MyListener implements ITestListener,ISuiteListener{
 
 	public void onTestStart(ITestResult result) {
-		ExtentReport.createTest(result.getMethod().getMethodName());
+		//ExtentReport.createTest(result.getMethod().getMethodName());
 		
 	}
 
@@ -24,7 +24,7 @@ public class MyListener implements ITestListener,ISuiteListener{
 
 	public void onTestFailure(ITestResult result) {
 		try {
-			ExtentLogger.fail(result.getMethod().getMethodName()+" is failed",true);
+			ExtentLogger.fail(result.getMethod().getMethodName()+" test  is failed",true);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -49,7 +49,9 @@ public class MyListener implements ITestListener,ISuiteListener{
 
 	public void onStart(ITestContext context) {
 		// TODO Auto-generated method stub
-		System.out.println("onStart in context");
+		//ExtentReport.createTest(result.getMethod().getMethodName());
+		
+		System.out.println(context.getName());
 		
 	}
 

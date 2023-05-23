@@ -15,7 +15,7 @@ public final class FrameworkConstants {
 	private static final String CHROMEDRIVERPATH =RESOURCESPATH+"/executables/chromedriver.exe";
 	private static final String CONFIGFILEPATH =RESOURCESPATH+"/config/config.properties";
 	private static final int EXPLICITWAIT = 30;
-	private static final String EXTENTREPORTFOLDERPATH = System.getProperty("user.dir")+"/extent-test-output";
+	private static final String EXTENTREPORTFOLDERPATH = System.getProperty("user.dir")+"/report_output";
 	private static String extentReportFilePath = "";
 	
 	public static String getExtentReportFilePath() throws Exception {

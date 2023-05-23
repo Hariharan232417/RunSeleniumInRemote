@@ -8,8 +8,10 @@
     <classes>
       <class name="testcases.CreateLead">
         <methods>
+          <include name="tearDown"/>
           <include name="setUp"/>
           <include name="createLead"/>
+          <include name="testDetails"/>
         </methods>
       </class> <!-- testcases.CreateLead -->
     </classes>

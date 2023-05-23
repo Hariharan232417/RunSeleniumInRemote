@@ -1,15 +1,23 @@
 package testcases;
 
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import pages.BasePage;
 import pages.Leaftaps_HomePage;
 import pages.Leaftaps_LeadNewRecordPage;
 import pages.Leaftaps_LoginPage;
+import reports.ExtentManager;
 import reports.ExtentReport;
 import utils.GenericMethods;
 
 public final class CreateLead extends BaseTest {
+	
+	@BeforeTest
+	public void testDetails()
+	{
+		ExtentReport.createTest("Create Lead");
+	}
 
 	
 	private CreateLead()

@@ -32,7 +32,7 @@ public final class ExtentReport {
 			File f = new File("./extent_test_output");
 			if(!f.mkdir())
 			{
-				reporter = new ExtentHtmlReporter("./extent_test_output/extent.html");
+				reporter = new ExtentHtmlReporter("./report_output/extent.html");
 			}
 			
 			reporter.setAppendExisting(false); 

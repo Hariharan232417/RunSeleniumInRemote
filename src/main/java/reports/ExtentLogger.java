@@ -35,7 +35,7 @@ public final class ExtentLogger {
 		ExtentManager.getExtentTest().skip(message);
 	}
 
-	public static void reportStep(String message, String status, boolean isScreenshotNeeded) throws Exception {
+	public static void reportStep(String message, String status, boolean isScreenshotNeeded) {
 
 		MediaEntityModelProvider img = null;
 		if (isScreenshotNeeded && !status.equalsIgnoreCase("INFO")) {
