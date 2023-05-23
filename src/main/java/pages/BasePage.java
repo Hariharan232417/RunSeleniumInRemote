@@ -24,7 +24,7 @@ public class BasePage {
 		
 		actions.moveToElement(ExplicitWaitFactory.performExplicitWait(waitStrategy, by)).click();
 		try {
-			ExtentLogger.pass(elementName + " is clicked ",true);
+			ExtentLogger.reportStep(elementName + " is clicked ","Pass", true);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -38,7 +38,7 @@ public class BasePage {
 		executor.executeScript("arguments[0].click();", ExplicitWaitFactory.performExplicitWait(waitStrategy, by));
 		
 		try {
-			ExtentLogger.pass(elementName + " is clicked ",true);
+			ExtentLogger.reportStep(elementName + " is clicked ","Pass", true);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -50,7 +50,8 @@ public class BasePage {
 		ExplicitWaitFactory.performExplicitWait(waitStrategy, by).sendKeys(value);
 		
 		try {
-			ExtentLogger.pass(value + " is entered in the  "+elementName,true);
+			ExtentLogger.reportStep(value + " is entered in the  "+elementName,"Pass", true);
+			
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

@@ -23,11 +23,10 @@
 		</dependency>
 
 		<dependency>
-			<groupId>com.aventstack</groupId>
-			<artifactId>extentreports</artifactId>
-			<version>5.0.5</version>
-
-		</dependency>
+            <groupId>com.aventstack</groupId>
+            <artifactId>extentreports</artifactId>
+            <version>3.1.5</version>
+        </dependency>
 
 		<dependency>
 			<groupId>org.apache.maven.plugins</groupId>
@@ -35,6 +34,8 @@
 			<version>3.1.0</version>
 			<type>maven-plugin</type>
 		</dependency>
+		
+	
 
 
 	</dependencies>
