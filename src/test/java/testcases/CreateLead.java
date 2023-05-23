@@ -17,16 +17,12 @@ public final class CreateLead extends BaseTest {
 		//added some tetxt
 	}
 	
-	@Test(invocationCount=2)
+	@Test(invocationCount=1)
 	public void createLead()
 	{
 		
 		
 		new Leaftaps_LoginPage()
-			
-			.enterUserName("Demosalesmanager")
-			.enterPassword("crmsfa")
-			.clickLoginButton()
 			.clickCrmSfaButton()
 			.clickCreateLeadButton()
 			.enterCompanyName(GenericMethods.generateRandomString(5))

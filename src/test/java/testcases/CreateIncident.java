@@ -1,5 +1,6 @@
 package testcases;
 
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import pages.ServiceNow_LoginPage;
@@ -13,13 +14,13 @@ public final class CreateIncident extends BaseTest {
 		//added some tetxt
 	}
 	
+		
 	@Test
 	public void createIncident()
 	{
 		
 		
 		new ServiceNow_LoginPage()
-			
 			.enterUserName("Demosalesmanager")
 			.enterPassword("crmsfa")
 			.clickLoginButton()

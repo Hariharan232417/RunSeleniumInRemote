@@ -25,7 +25,8 @@ public class Driver {
 			ChromeOptions options = new ChromeOptions();
 
 			options.addArguments("--remote-allow-origins=*");
-			WebDriver driver= new ChromeDriver(options);
+
+			RemoteWebDriver driver= new ChromeDriver(options);
 			
 			
 			/*
@@ -35,7 +36,14 @@ public class Driver {
 			 * (MalformedURLException e1) { e1.printStackTrace(); }
 			 */
 			 
-			
+
+
+			/*
+			 * RemoteWebDriver driver=null; try { driver = new RemoteWebDriver(new
+			 * URL("http://13.233.254.139:4444"),cap); } catch (MalformedURLException e1) {
+			 * // TODO Auto-generated catch block e1.printStackTrace(); }
+			 */
+						
 			DriverManager.setDriver(driver);
 			
 			try {

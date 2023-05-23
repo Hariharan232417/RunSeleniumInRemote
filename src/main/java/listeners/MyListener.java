@@ -49,12 +49,13 @@ public class MyListener implements ITestListener,ISuiteListener{
 
 	public void onStart(ITestContext context) {
 		// TODO Auto-generated method stub
+		System.out.println("onStart in context");
 		
 	}
 
 	public void onFinish(ITestContext context) {
 		
-		
+		System.out.println("onFinish in context");
 	}
 
 	public void onStart(ISuite suite) {
