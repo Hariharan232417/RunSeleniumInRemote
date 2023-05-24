@@ -38,10 +38,6 @@ public final class CreateLead extends BaseTest {
 			.enterLastName(GenericMethods.generateRandomString(6))
 			.clickSubmitButton()
 			.getId();  
-//testcase
-		
-
-		
 		
 		
 			

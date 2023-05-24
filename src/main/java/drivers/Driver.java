@@ -24,19 +24,16 @@ public class Driver {
 
 			options.addArguments("--remote-allow-origins=*");
 
-			// RemoteWebDriver driver = new ChromeDriver(options);
-
-			DesiredCapabilities cap = new DesiredCapabilities();
-			cap.setBrowserName("chrome");
-			RemoteWebDriver driver = null;
-			try {
-				driver = new RemoteWebDriver(new URL("http://3.109.186.147:4444"), cap);
-			} catch (MalformedURLException e1) {
-				e1.printStackTrace();
-			}
+			 //RemoteWebDriver driver = new ChromeDriver(options);
 
 			
+			  DesiredCapabilities cap = new DesiredCapabilities();
+			  cap.setBrowserName("chrome"); RemoteWebDriver driver = null; try { driver =
+			  new RemoteWebDriver(new URL("http://3.109.181.54:4444"), cap); } catch
+			  (MalformedURLException e1) { e1.printStackTrace(); }
+			 
 
+	
 			DriverManager.setDriver(driver);
 
 			try {
