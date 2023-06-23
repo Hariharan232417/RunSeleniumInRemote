@@ -31,8 +31,8 @@ public class Driver {
 			cap.setBrowserName("chrome");
 			RemoteWebDriver driver = null;
 			try {
-				//driver = new RemoteWebDriver(new URL("http://"+ReadPropertyFile.getValue(ConfigProperties.IP)+":4444"), cap);
-				driver = new RemoteWebDriver(new URL("http://65.0.12.114:4444"), cap);
+				driver = new RemoteWebDriver(new URL("http://"+ReadPropertyFile.getValue(ConfigProperties.IP)+":4444"), cap);
+				//driver = new RemoteWebDriver(new URL("http://65.0.12.114:4444"), cap);
 				
 			} catch (MalformedURLException e1) {
 				e1.printStackTrace();
