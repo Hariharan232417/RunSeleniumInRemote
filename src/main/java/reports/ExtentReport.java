@@ -35,7 +35,7 @@ public final class ExtentReport {
 				reporter = new ExtentHtmlReporter("./report_output/extent.html");
 			}
 			
-			reporter.setAppendExisting(false); 
+			//reporter.setAppendExisting(false); 
 			extent = new ExtentReports();
 			extent.attachReporter(reporter);
 		}

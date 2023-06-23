@@ -5,9 +5,6 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriverException;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
@@ -38,7 +35,7 @@ public  class MyReporter {
 			reporter = new ExtentHtmlReporter("./extent_test_output/extent.html");
 		}
 		
-		reporter.setAppendExisting(false); 
+		//reporter.setAppendExisting(false); 
 		extent = new ExtentReports();
 		extent.attachReporter(reporter);
 	}
