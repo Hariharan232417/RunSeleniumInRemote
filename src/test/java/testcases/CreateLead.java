@@ -43,4 +43,12 @@ public final class CreateLead extends BaseTest {
 			
 	}
 	
+	
+	@Test(priority = 1)
+	public void createLead2() {
+		new Leaftaps_HomePage().clickCreateLeadButton().enterCompanyName(GenericMethods.getCompanyName())
+				.enterFirstName(GenericMethods.getFirstName()).enterLastName(GenericMethods.getLastName())
+				.clickSubmitButton().getId2();
+	}
+	
 }
