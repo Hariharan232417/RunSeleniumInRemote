@@ -1,9 +1,10 @@
 package utils;
 
 import java.text.SimpleDateFormat;
-import java.util.*;
+import java.util.Date;
+import java.util.Random;
 
-import pages.Leaftaps_LeadNewRecordPage;
+import com.github.javafaker.Faker;
 
 public class GenericMethods {
 
@@ -43,6 +44,27 @@ public class GenericMethods {
 		String res = text.replaceAll("[^0-9]", "");
 	
 		return res;
+	}
+	
+	public static String getFirstName() {
+		Faker faker = new Faker();
+
+		String Firstname = faker.name().firstName();
+		return Firstname;
+
+	}
+
+	public static String getLastName() {
+		Faker faker = new Faker();
+
+		String Lastname = faker.name().lastName();
+		return Lastname;
+	}
+	public static String getCompanyName() {
+		Faker faker = new Faker();
+
+		String Company = faker.company().name();
+		return Company;
 	}
 
 }

@@ -1,3 +1,9 @@
+package pages;
+
+import org.openqa.selenium.By;
+
+import enums.WaitStrategy;
+import pages.BasePage;
 
 public class LeafTaps_MergeLeadPage extends BasePage {
 		private final String mergeLeads = "//a[text()=\"Merge Leads\"]";
@@ -5,34 +11,34 @@ public class LeafTaps_MergeLeadPage extends BasePage {
 		private final String toLead = "//input[@name=\"ComboBox_partyIdTo\"]";
 		private final String mergeButton = "//a[@class=\"buttonDangerous\"]";
 
-		public Leaftaps_MergeLeadPage clickMergeLeadButton() {
-			click(By.xpath(mergeLeads), WaitStrategy.CLICKABLE, "Click Merge Lead Button");
-			return new Leaftaps_MergeLeadPage();
+		public LeafTaps_MergeLeadPage clickMergeLeadButton() {
+			//click(By.xpath(mergeLeads), WaitStrategy.CLICKABLE, "Click Merge Lead Button");
+			
+			click(By.xpath(mergeLeads), WaitStrategy.CLICKABLE, "CrmSfaButton");
+			return this;
 
 		}
 
-		public Leaftaps_MergeLeadPage enterFromLead() {
+		public LeafTaps_MergeLeadPage enterFromLead() {
 			sendKeys(By.xpath(fromLead), leadNumber1, WaitStrategy.PRESENCE, "Set newly Created Lead");
 
 			return this;
 
 		}
 
-		public Leaftaps_MergeLeadPage enterToLead() {
+		public LeafTaps_MergeLeadPage enterToLead() {
 			sendKeys(By.xpath(toLead), leadNumber2, WaitStrategy.PRESENCE, "Set newly Created Lead");
 
 			return this;
 
 		}
 
-		public Leaftaps_MergeLeadPage clickMergeButton()
+		public LeafTaps_MergeLeadPage clickMergeButton()
 
 		{
 			click(By.xpath(mergeButton), WaitStrategy.CLICKABLE, "Merge Two Leads");
-			return new Leaftaps_MergeLeadPage();
+			return this;
 
 		}
 
 	}
-
-}

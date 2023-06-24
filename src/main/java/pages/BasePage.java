@@ -14,6 +14,9 @@ import reports.ExtentLogger;
 public class BasePage {
 
 	public static String leadNumber = "";
+	
+	public static String leadNumber1 = "";
+	public static String leadNumber2 = "";
 
 	protected void click(By by, WaitStrategy waitStrategy, String elementName) {
 		try {
