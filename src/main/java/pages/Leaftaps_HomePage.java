@@ -11,6 +11,8 @@ import reports.ExtentReport;
 public class Leaftaps_HomePage extends BasePage{
 	
 private final String CreateLeadButton = "//a[text()='Create Lead']";
+
+private final String LeadsButton = "//a[@href='/crmsfa/control/leadsMain']";
 	
 
 	
@@ -19,6 +21,12 @@ private final String CreateLeadButton = "//a[text()='Create Lead']";
 		click(By.xpath(CreateLeadButton), WaitStrategy.CLICKABLE, "CreateLeadButton");
 		return new Leaftaps_LeadNewRecordPage() ;
 	
+	}
+	
+	public LeadsPage clickLeadsButton()
+	{
+		click(By.xpath(LeadsButton), WaitStrategy.CLICKABLE, "LeadsButton");
+		return new LeadsPage();
 	}
 	
 	

@@ -11,10 +11,13 @@ import org.testng.ITestResult;
 import reports.ExtentLogger;
 import reports.ExtentReport;
 
+
 public class MyListener implements ITestListener,ISuiteListener{
 
 	public void onTestStart(ITestResult result) {
 		//ExtentReport.createTest(result.getMethod().getMethodName());
+		
+		ExtentReport.createTest(result.getMethod().getMethodName());
 		
 	}
 
@@ -50,13 +53,13 @@ public class MyListener implements ITestListener,ISuiteListener{
 	public void onStart(ITestContext context) {
 		// TODO Auto-generated method stub
 		//ExtentReport.createTest(result.getMethod().getMethodName());
-		
+		//ExtentReport.initReports();
 		System.out.println(context.getName());
 		
 	}
 
 	public void onFinish(ITestContext context) {
-		
+	
 		System.out.println("onFinish in context");
 	}
 
@@ -66,12 +69,8 @@ public class MyListener implements ITestListener,ISuiteListener{
 	}
 
 	public void onFinish(ISuite suite) {
-		try {
 			ExtentReport.flushReports();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		
 	}
 	
 	

@@ -1,9 +1,14 @@
 package pages;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.ElementClickInterceptedException;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.StaleElementReferenceException;
+import org.openqa.selenium.TimeoutException;
+import org.openqa.selenium.UnhandledAlertException;
 import org.openqa.selenium.interactions.Actions;
 
 import drivers.DriverManager;
@@ -15,8 +20,8 @@ public class BasePage {
 
 	public static String leadNumber = "";
 	
-	public static String leadNumber1 = "";
-	public static String leadNumber2 = "";
+	//public static String leadNumber1 = "";
+	public static String leadNumber2 = "10233";
 
 	protected void click(By by, WaitStrategy waitStrategy, String elementName) {
 		try {
@@ -28,6 +33,20 @@ public class BasePage {
 		}
 		catch (ElementClickInterceptedException e) {
 			ExtentLogger.reportStep("Element not clicked - "+elementName + " as it is intercepted","Fail", true);
+		}
+		catch (TimeoutException e) {
+			ExtentLogger.reportStep("Element not clicked - "+elementName + " as it is not found within the time","Fail", true);
+			new TimeoutException("Element not found");
+		}
+		
+		catch (StaleElementReferenceException e) {
+			ExtentLogger.reportStep("Element not clicked - "+elementName + " as the Element is stale","Fail", true);
+			new StaleElementReferenceException("Element Stale");
+		}
+		
+		catch (UnhandledAlertException e) {
+			ExtentLogger.reportStep("Element not clicked - "+elementName + " as the Alert is present","Fail", true);
+			new UnhandledAlertException("Element Stale");
 		}
 		
 
@@ -82,6 +101,29 @@ public class BasePage {
 		}
 
 		return text;
+	}
+	
+	
+	protected void clickOkInAlert()
+	{
+		
+		//Alert alert = ExplicitWaitFactory.performExplicitWait(waitStrategy,null);
+		try {
+			Thread.sleep(2000);
+		
+		DriverManager.getDriver().switchTo().alert().accept();
+		
+		ExtentLogger.reportStep("Clicked Ok button in Alert", "Pass", true);
+		
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		catch(NoAlertPresentException nA)
+		{
+			ExtentLogger.reportStep("No alert present", "fail", true);
+			throw new NoAlertPresentException();
+		}
 	}
 
 	protected String getPageTitle() {

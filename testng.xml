@@ -7,14 +7,8 @@
   <test thread-count="5" name="Test_1">
     <classes>
       <class name="testcases.CreateLead"/>
-     
+     <class name="testcases.MergeLead"/>
     </classes>
   </test> <!-- Test -->
-  
-  <test thread-count="5" name="Test_2">
-    <classes>
-      <class name="testcases.MergeLead"/>
-     
-    </classes>
-  </test>
+ 
 </suite> <!-- Suite -->

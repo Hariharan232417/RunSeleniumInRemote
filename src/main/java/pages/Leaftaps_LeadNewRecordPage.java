@@ -65,5 +65,14 @@ public class Leaftaps_LeadNewRecordPage extends BasePage{
 		return this;
 	}
 	
+	public Leaftaps_LeadNewRecordPage getId2()
+
+	{
+		String leadID2= getElementText(By.xpath(Id), WaitStrategy.PRESENCE, Id);
+		leadNumber2 = GenericMethods.extractNumber(leadID2);
+		System.out.println(leadNumber2);
+		return this;
+	}
+	
 	
 }

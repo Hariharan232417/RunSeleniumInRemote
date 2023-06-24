@@ -35,12 +35,6 @@ public class BaseTest {
 	public void setUp()
 	{
 		Driver.initDriver();
-		
-		new Leaftaps_LoginPage()
-		
-		.enterUserName("Demosalesmanager")
-		.enterPassword("crmsfa")
-		.clickLoginButton();
 	}
 	
 	@AfterMethod

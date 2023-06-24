@@ -1,5 +1,6 @@
 package factories;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -33,6 +34,7 @@ public class ExplicitWaitFactory {
 		{
 			element = DriverManager.getDriver().findElement(by);
 		}
+		
 		
 		return element;
 	}
