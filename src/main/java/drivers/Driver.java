@@ -24,14 +24,14 @@ public class Driver {
 
 			options.addArguments("--remote-allow-origins=*");
 
-			 RemoteWebDriver driver = new ChromeDriver(options);
+			// RemoteWebDriver driver = new ChromeDriver(options);
 
 			DesiredCapabilities cap = new DesiredCapabilities();
 
 			cap.setBrowserName("chrome");
-			//RemoteWebDriver driver = null;
+			RemoteWebDriver driver = null;
 			try {
-				//driver = new RemoteWebDriver(new URL("http://"+ReadPropertyFile.getValue(ConfigProperties.IP)+":4444"), cap);
+				driver = new RemoteWebDriver(new URL("http://"+ReadPropertyFile.getValue(ConfigProperties.IP)+":4444"), cap);
 				//driver = new RemoteWebDriver(new URL("http://65.0.12.114:4444"), cap);
 				
 			
