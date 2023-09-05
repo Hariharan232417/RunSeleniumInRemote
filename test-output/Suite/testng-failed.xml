@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT" verbose="5">
+  <listeners>
+    <listener class-name="listeners.MyListener"/>
+  </listeners>
+  <test name="Test(failed)">
+    <classes>
+      <class name="testcases.CreateLead">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="createLead"/>
+          <include name="createLead2"/>
+        </methods>
+      </class> <!-- testcases.CreateLead -->
+      <class name="testcases.MergeLead">
+        <methods>
+          <include name="MergeLead"/>
+        </methods>
+      </class> <!-- testcases.MergeLead -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
